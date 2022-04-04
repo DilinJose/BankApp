@@ -53,11 +53,34 @@ export class LoginComponent implements OnInit {
 
 //login using template reference variable
 
-  login(a:any,p:any) {
-    // console.log(a.value);
-    // console.log(p.value);
-    let acno = a.value;
-    let pswd = p.value;
+  // login(a:any,p:any) {
+  //   // console.log(a.value);
+  //   // console.log(p.value);
+  //   let acno = a.value;
+  //   let pswd = p.value;
+
+  //   if (acno in this.database) {
+  //     if (pswd == this.database[acno]["password"]) {
+  //       alert("Login Successful")
+
+  //     }
+  //     else{
+  //       alert("Invalid Password")
+  //     }
+  //   }
+  //   else {
+  //     alert("Invalid Account Number");
+  //   }
+  // }
+
+  // for two way binding(same as event binding)
+
+  login() {
+    
+    let acno = this.acno;
+    let pswd = this.pswd;
+
+    console.log(acno);
 
     if (acno in this.database) {
       if (pswd == this.database[acno]["password"]) {
@@ -72,7 +95,4 @@ export class LoginComponent implements OnInit {
       alert("Invalid Account Number");
     }
   }
-
-
-
 }
